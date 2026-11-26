@@ -123,7 +123,6 @@ services:
       WEBAPP_URL: ${WEBAPP_URL}
       BETTER_AUTH_URL: ${BETTER_AUTH_URL}
       NEXTAUTH_URL: ${NEXTAUTH_URL}
-      PUBLIC_URL: ${PUBLIC_URL}
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/formbricks?schema=public
       BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET}
       NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
@@ -165,7 +164,6 @@ services:
       WEBAPP_URL: ${WEBAPP_URL}
       BETTER_AUTH_URL: ${BETTER_AUTH_URL}
       NEXTAUTH_URL: ${NEXTAUTH_URL}
-      PUBLIC_URL: ${PUBLIC_URL}
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/formbricks?schema=public
       BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET}
       NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
