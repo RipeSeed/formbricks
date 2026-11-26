@@ -108,7 +108,9 @@ services:
       start_period: 10s
 
   formbricks-migrate:
-    image: ghcr.io/formbricks/formbricks:latest
+    build:
+      context: ..
+      dockerfile: apps/web/Dockerfile
     restart: "no"
     exclude_from_hc: true
     entrypoint: ["sh", "-c"]
@@ -147,7 +149,9 @@ services:
 
   formbricks:
     restart: always
-    image: ghcr.io/formbricks/formbricks:latest
+    build:
+      context: ..
+      dockerfile: apps/web/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
@@ -188,7 +192,9 @@ services:
       AUTHZED_CONSISTENCY: ${AUTHZED_CONSISTENCY:-fully_consistent}
 
   authzed-initialize:
-    image: ghcr.io/formbricks/formbricks:latest
+    build:
+      context: ..
+      dockerfile: apps/web/Dockerfile
     restart: "no"
     exclude_from_hc: true
     entrypoint: ["formbricks-authzed"]
