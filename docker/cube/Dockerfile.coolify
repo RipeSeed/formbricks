@@ -1,0 +1,5 @@
+FROM ghcr.io/formbricks/cube:1.8.25-1
+
+COPY --chown=65532:65532 cube.js /cube/conf/cube.js
+COPY --chown=65532:65532 schema /cube/conf/model
+
